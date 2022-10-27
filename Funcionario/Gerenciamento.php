@@ -125,7 +125,7 @@
         <!-- Bloco com Predios -->
         <div class="Main_Cont2">
            <!-- Adicionar Chave -->
-           <div id="botao-cadastro1"><h3>Cadastro de Chaves</h3></div>
+           <div class="botao chave" id="botao-cadastro1"><h3>Cadastro de Chaves</h3></div>
             <div class="form1_cad_Chaves" id="formChave">
                 <div id="botao-cadastro2"><h3>Cadastro de Chaves</h3></div>
                 
@@ -157,7 +157,7 @@
                 </form>
             </div>
             <!-- Alterar Chave -->
-            <div id="botao-alterar1"><h3>Alterar de Chaves</h3></div>
+            <div class="botao chave" id="botao-alterar1"><h3>Alterar de Chaves</h3></div>
             
             <div class="form2_alt_Chaves" id="formChave">
                 <div><h3>Alterar Chaves</h3></div>
@@ -187,7 +187,7 @@
                 </form>
             </div>
             <!-- Excluir Chave -->
-            <div id="botao-excluir1"><h3>Excluir Chaves</h3></div>
+            <div class="botao chave" id="botao-excluir1"><h3>Excluir Chaves</h3></div>
             
             <div class="form3_excl_Chaves" id="formChave">
                 <div><h3>Excluir Chaves</h3></div>
