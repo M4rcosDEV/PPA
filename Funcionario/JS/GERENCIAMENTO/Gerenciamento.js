@@ -76,7 +76,7 @@ botao_alterar.addEventListener("click", fecharFormAlt);
 botao_excluir.addEventListener("click", fecharFormExcluir);
 
 botao_alt_chave.addEventListener("click", ()=>{
-    formAlterar.style.display = 'none';
+    //formAlterar.style.display = 'none';
     botao_alterar.style.display = 'flex';
 });
 
@@ -84,3 +84,6 @@ botao_excluir_chave.addEventListener("click", ()=>{
     formExcluir.style.display = 'none';
     botao_excluir.style.display = 'flex';
 });
+
+// Pop para inserir os novos dados da chave que vai ser alterada.
+

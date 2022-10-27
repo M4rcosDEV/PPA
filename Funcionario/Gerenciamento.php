@@ -161,7 +161,8 @@
             
             <div class="form2_alt_Chaves" id="formChave">
                 <div><h3>Alterar Chaves</h3></div>
-                <form id="AlterarChaves">
+                <form id="AlterarChaves" action="../Funcionario/PHP/GERENCIAMENTO/Chave.php" method="POST">
+                    
                     <div>
                         <label for="idChave">Número da chave: </label>
                         <input type="number" name="idChave" id="idChave">
@@ -181,8 +182,26 @@
                             <option value="Outros">Outros</option>
                         </select>
                     </div>
+                    
                     <div>
-                        <input type="submit" value="Alterar" id="SubmitAlterarPredio">
+                        <input type="text" name="tipo" value="alterarChave" style="display: none">
+
+                        <input type="submit" value="Alterar" id="SubmitAlterarPredio" onclick=" return pegarInfo()">
+                        <script type="text/javascript" defer>
+	                        function pegarInfo() {
+		                    var numChave = prompt("Insira o seu nome");
+                            var numPredio = prompt("Insira o seu nome");
+
+		                    document.getElementById('numChave').value = numChave;
+                            document.getElementById('numPredio').value = numPredio;
+		                    document.forms['form1'].submit();
+	                        }
+                        </script>
+                        <form action="../Funcionario/PHP/GERENCIAMENTO/Chave.php" method="POST" name="form1">
+	                        <input type="hidden" name="numChave" id="numChave">
+                            <input type="hidden" name="numPredio" id="numPredio">
+                        </form>
+
                     </div>
                 </form>
             </div>
@@ -191,7 +210,7 @@
             
             <div class="form3_excl_Chaves" id="formChave">
                 <div><h3>Excluir Chaves</h3></div>
-                    <form id="ExcluirChaves">
+                    <form id="ExcluirChaves" action="../Funcionario/PHP/GERENCIAMENTO/Chave.php" method="POST">
                         <div>
                             <label for="idChave">Número da chave: </label>
                             <input type="number" name="idChave" id="idChave">
@@ -201,6 +220,7 @@
                             <input type="number" name="idPredio" id="idPredio">
                         </div>
                         <div>
+                            <input type="text" name="tipo" value="excluirChave" style="display: none">
                             <input type="submit" value="Excluir" id="SubmitExcluirPredio">
                         </div>
                     </form>

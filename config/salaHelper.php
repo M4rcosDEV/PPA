@@ -29,7 +29,6 @@ function cadastrar()
     header("Location:../Funcionario/sala.php?id_predio=".$id_predio);
 }
 
-
 function getSalas(){
     try{
         $banco = new Banco();

@@ -42,4 +42,38 @@
             }
         }
 
+        function alterarChave($novoNumChave, $novoNumPredio){
+            $banco = new Banco();
+            $conexao = $banco->conectar();
+            try{
+                $stmt = $conexao->prepare("UPDATE chave SET idChave = novaChave, idPredio= novoPredio, descricao= novaDesc WHERE idChave = :id_chave AND idPredio = :id_predio");
+                $stmt->bindParam('novaChave', $novoNumChave);
+                $stmt->bindParam('novoPredio', $novoNumPredio);
+                $novaDesc = 'casa';
+                $stmt->bindParam('novaDesc', $novaDesc);
+                $stmt->bindParam(':id_chave', $this->idChave);
+                $stmt->bindParam(':id_predio', $this->idPredio);
+                $stmt->bindParam(':descricao', $this->Descricao);
+                $stmt->execute();
+        
+            }catch(PDOException $ex){
+            echo "Erro ao inserir aluno: " . $ex;
+            }
+        }
+
+        function excluirChave(){
+            $banco = new Banco();
+            $conexao = $banco->conectar();
+            try{
+                $stmt = $conexao->prepare("DELETE FROM chave WHERE idChave = :id_chave AND idPredio = :id_predio");
+
+                $stmt->bindParam(':id_chave', $this->idChave);
+                $stmt->bindParam(':id_predio', $this->idPredio);
+                $stmt->execute();
+        
+            }catch(PDOException $ex){
+            echo "Erro ao inserir aluno: " . $ex;
+            }
+        }
+
     }
